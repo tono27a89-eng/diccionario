@@ -47,6 +47,17 @@ namespace diccionario
                         producto[id] = (nombre, precio, peso);
 
                         break;
+                    case 3:
+                        Console.WriteLine("Id a eliminar");
+                        id = int.Parse(Console.ReadLine());
+                        producto.Remove(id);
+                        break;
+                        case 4:
+                        foreach (var item in producto)
+                        {
+                            Console.WriteLine("ID: "+item.Key+ "producto: "+item.Value);   
+                        }
+                        break;
                     default:
                         break;
                 }
