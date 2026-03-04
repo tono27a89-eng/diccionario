@@ -40,7 +40,11 @@ namespace diccionario
                         id = int.Parse(Console.ReadLine());
                         Console.Write("Nuevo nombre: ");
                         nombre = Console.ReadLine();
-                        producto[id] = nombre;
+                        Console.WriteLine("ingrese nuevo precio");
+                        precio= int.Parse(Console.ReadLine());
+                        Console.WriteLine("ingrese nuevo peso");
+                        peso= int.Parse(Console.ReadLine());
+                        producto[id] = (nombre, precio, peso);
 
                         break;
                     default:
