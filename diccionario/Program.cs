@@ -26,14 +26,20 @@ namespace diccionario
                     case 1:
                         Console.WriteLine("ingrese id de producto");
                         int.TryParse(Console.ReadLine(), out int id);
-                        Console.WriteLine("ingrese nombre");
-                        string nombre = Console.ReadLine();
-                        Console.WriteLine("ingrese precio");
-                        int precio= int.Parse(Console.ReadLine());
-                        Console.WriteLine("ingrese peso");
-                        int peso= int.Parse(Console.ReadLine());
-                        producto.Add(id,(nombre, precio, peso));
-
+                        if (producto.ContainsKey(id))
+                        {
+                            Console.WriteLine("Id ya ingresado");
+                        }
+                        else
+                        {
+                            Console.WriteLine("ingrese nombre");
+                            string nombre = Console.ReadLine();
+                            Console.WriteLine("ingrese precio");
+                            int precio = int.Parse(Console.ReadLine());
+                            Console.WriteLine("ingrese peso");
+                            int peso = int.Parse(Console.ReadLine());
+                            producto.Add(id, (nombre, precio, peso));
+                        }
                         break;
                         case 2:
                         Console.Write("ID a modificar: ");
