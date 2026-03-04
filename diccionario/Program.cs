@@ -14,6 +14,9 @@ namespace diccionario
         {
             Dictionary<int, (string nombre, int precio, int peso)> producto = new Dictionary<int, (string, int, int)>();
             int opcion;
+            int id;
+            string nombre;
+
             do
             {
                 Console.WriteLine("1. agregar producto");
@@ -25,10 +28,10 @@ namespace diccionario
                 {
                     case 1:
                         Console.WriteLine("ingrese id de producto");
-                        int.TryParse(Console.ReadLine(), out int id);
+                        int.TryParse(Console.ReadLine(), out  id);
                         if (producto.ContainsKey(id))
                         {
-                            Console.WriteLine("Id ya ingresado");
+                            Console.WriteLine("valid");
                         }
                         else
                         {
